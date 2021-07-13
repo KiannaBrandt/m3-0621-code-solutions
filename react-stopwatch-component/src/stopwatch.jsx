@@ -46,15 +46,15 @@ class Stopwatch extends React.Component {
     let stopwatchFunction;
     let resetFunction;
     if ((this.state.timerOn === false) && (this.state.runningTime === 0)) {
-      stopwatchClass = "fas fa-play";
+      stopwatchClass = "icon fas fa-play";
       stopwatchFunction = this.startTimer;
     }
     if (this.state.timerOn === true) {
-      stopwatchClass = "fas fa-pause";
+      stopwatchClass = "icon fas fa-pause";
        stopwatchFunction = this.stopTimer;
     }
     if ((this.state.timerOn === false) && (this.state.runningTime > 0)) {
-      stopwatchClass = "fas fa-play";
+      stopwatchClass = "icon fas fa-play";
       stopwatchFunction = this.startTimer;
       resetFunction = this.resetTimer;
     }
@@ -66,10 +66,5 @@ class Stopwatch extends React.Component {
     );
   }
 }
-
-ReactDOM.render(
-  <Stopwatch />,
-  document.querySelector('#root')
-)
 
 export default Stopwatch;
