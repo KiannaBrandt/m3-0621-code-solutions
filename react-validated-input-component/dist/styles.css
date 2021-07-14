@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+i {
+  margin-left: 0.5em;;
+}
+
+p {
+  font-size: 0.9em;
+  color: red;
+}
+
+.icon-red {
+  color: red;
+}
+
+.icon-green {
+  color: green;
+}
