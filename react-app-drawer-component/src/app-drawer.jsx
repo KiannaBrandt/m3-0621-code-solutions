@@ -7,6 +7,7 @@ class AppDrawer extends React.Component {
   this.state = {modalOpen: false};
   this.openModal = this.openModal.bind(this);
   this.closeModal = this.closeModal.bind(this);
+  this.setStyles = this.setStyles.bind(this);
   }
 
   openModal() {
@@ -17,7 +18,7 @@ class AppDrawer extends React.Component {
   this.setState({ modalOpen: false });
   }
 
-  render() {
+  setStyles() {
     let backgroundStyle;
     let iconStyle;
     if (this.state.modalOpen === false) {
@@ -35,10 +36,15 @@ class AppDrawer extends React.Component {
         display: "none"
       }
     }
+    return {backgroundStyle: backgroundStyle, iconStyle: iconStyle}
+  }
+
+  render() {
+    const styles = this.setStyles();
     return (
       <div className="modal">
-        <i className="icon fas fa-bars" onClick={this.openModal} style={iconStyle}></i>
-        <div className="modal-background" onClick={this.closeModal} style={backgroundStyle}>
+        <i className="icon fas fa-bars" onClick={this.openModal} style={styles.iconStyle}></i>
+        <div className="modal-background" onClick={this.closeModal} style={styles.backgroundStyle}>
           <div className="modal-content">
             <p>Menu</p>
             <p onClick={this.closeModal}>About</p>
