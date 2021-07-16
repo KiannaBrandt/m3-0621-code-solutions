@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.tab {
+  background-color: lightgray;
+  font-size: 1.1em;
+}
+
+.tab, .info {
+  border: 1px solid black;
+  padding: 0.8em;
+}
